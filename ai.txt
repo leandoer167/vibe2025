@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 писал через chat.GPT 4o 	
 
 Приложил файлы index.js index.html nodejs mysql
@@ -8,3 +9,13 @@
 2. сделай с кнопкой edit
 
 3. пофикси нумерацию id, чтобы  при удалении дела нумерация шла по порядку
+=======
+писал через chat.GPT 4o mini
+
+Приложил файлы index.js index.html nodejs mysql
+Промпты:
+1. Делаю to-do лист добавь сюда функцию добавления дел в index.js и убери функции из
+ скрипта index.html работает на nodejs и mysql
+
+2.добавь возможность редактирования дел
+>>>>>>> Stashed changes
