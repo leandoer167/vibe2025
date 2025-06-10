@@ -31,6 +31,11 @@ app.get('/', (req, res) => {
             <tr>
                 <td>${index + 1}</td>
                 <td>${item.text}</td>
+                <td>
+                    <form action="/delete/${item.id}" method="POST" style="display:inline;">
+                        <button type="submit">Remove</button>
+                    </form>
+                </td>
             </tr>
         `).join('');
 
@@ -53,6 +58,15 @@ app.post('/add', (req, res) => {
     } else {
         res.redirect('/');
     }
+});
+
+// Удаление дела
+app.post('/delete/:id', (req, res) => {
+    const id = req.params.id;
+    db.query('DELETE FROM items WHERE id = ?', [id], (err) => {
+        if (err) throw err;
+        res.redirect('/');
+    });
 });
 
 app.listen(port, () => {
